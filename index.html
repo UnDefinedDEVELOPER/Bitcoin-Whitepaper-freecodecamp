@@ -4,31 +4,202 @@
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
      <title>Bitcoin Whitepaper</title>
 </head>
 <body>
-     <main class="grid">
-          <section id="contentList" class="container">
-               <ul>
-                    <h1>Bitcoin Whitepaper</h1>
-                    <li><a href="#">How to use this guide</a></li>
-                    <li><a href="#">1. Introduction</a></li>
-                    <li><a href="#">2. Transactions</a></li>
-                    <li><a href="#">3. Timestamp Server</a></li>
-                    <li><a href="#">4. Proof-of-Work</a></li>
-                    <li><a href="#">5. Network</a></li>
-                    <li><a href="#">6. Incentive</a></li>
-                    <li><a href="#">7. Reclaiming Disk Space</a></li>
-                    <li><a href="#">8. Simplified Payment Verification</a></li>
-                    <li><a href="#">9. Combining and Splitting Value</a></li>
-                    <li><a href="#">10. Privacy</a></li>
-                    <li><a href="#">11. Calculations</a></li>
-                    <li><a href="#">12. Conclusion</a></li>
-               </ul>
+     <div>
+          <section id="contentList" class="container contentList">
+               <nav id="navbar">
+                    <header>
+                         <h1>Bitcoin <span class="titleSpan">Whitepaper</span></h1>
+                         <i class="fas fa-bars fa-2x" id="burgerMenu"></i>
+                    </header>
+                    <ul class="grid" id="nav-menu">
+                         <li><a class="nav-link" href="#How_To_Use_This_Guide">How To Use This Guide</a></li>
+                         <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+                         <li><a class="nav-link" href="#Transactions">Transactions</a></li>
+                         <li><a class="nav-link" href="#Timestamp_Server">Timestamp Server</a></li>
+                         <li><a class="nav-link" href="#Proof-Of-Work">Proof-of-Work</a></li>
+                         <li><a class="nav-link" href="#Network">Network</a></li>
+                         <li><a class="nav-link" href="#Incentive">Incentive</a></li>
+                         <li><a class="nav-link" href="#Reclaiming_Disk_Space">Reclaiming Disk Space</a></li>
+                         <li><a class="nav-link" href="#Simplified_Payment_Verification">Simplified Payment Verification</a></li>
+                         <li><a class="nav-link" href="#Combining_and_Splitting_Value">Combining and Splitting Value</a></li>
+                         <li><a class="nav-link" href="#Privacy">Privacy</a></li>
+                         <li><a class="nav-link" href="#Calculations">Calculations</a></li>
+                         <li><a class="nav-link" href="#Conclusion">Conclusion</a></li>
+                    </ul>
+               </nav>
           </section>
-          <section id="content" class="container">
-               
-          </section>
-     </main>
+          <main id="main-doc" class="container">
+               <!-- How to use this guide -->
+               <section class="main-section" id="How_To_Use_This_Guide">
+                    <header>
+                         <h1>How To Use This Guide</h1>
+                    </header>
+                    <p>Bitcoin.com offers a simplified explanation of Nakamoto's work. We provide annotations for all 12 sections of the whitepaper. Text in italics is used to provide commentary and annotations to distinguish the author's views from those of Satoshi Nakamoto's.</p>
+               </section>
+
+               <!-- Introduction -->
+               <section class="main-section" id="Introduction">
+                    <header>
+                         <h1>Introduction</h1>
+                    </header>
+                    <code>
+                         <li>Transactions can be reversed since banks must mediate disputes that inevitably arise.</li>
+                    </code>
+                    <blockquote>
+                         Think of disputes that routinely take place between merchants, consumers and other parties, such as payment processors, PayPal or tax authorities. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident veniam libero cum? Pariatur eius dicta possimus molestias assumenda earum cupiditate.
+                    </blockquote>
+                    <code>
+                         <li>Banks' intervention (i.e., mediation) increases transaction costs and this also limits the minimum practical transaction size. The reversibility of transactions becomes a problem when a provider has delivered non-reversible services.</li>
+                    </code>
+                    <blockquote>Consumers frequently buy low-cost items on the web, such as $5 keychains and $10 eyeglasses. However, bank involvement costs a lot and these costs are passed on to consumers through transaction fees and other charges. Consider all the mediation and litigation expenses that pile up in a given year and you can see that transaction costs can be significant. Moreover, if a provider completes a service he should rightfully get paid. But the current system allows transactions to be reversed, putting a service provider at risk of not getting paid.</blockquote>
+                    <li>The possibility of a transaction's reversal hangs over everyone. And that requires people to trust a third party such as banks to resolve payment disputes.</li>
+                    <blockquote>Many merchants and consumers don't want to trust a financial institution. They're expensive; may not be trustworthy; are frequently hacked; and often give too much information to the government without informing the affected party. All this also create privacy concerns. In this section, Nakamoto outlines the limitations of the traditional payment system, and he is setting up the audience for his proposed solutions.</blockquote>
+                    <code>
+                         <li>The system accepts a certain percentage of fraud as unavoidable. Nonetheless, fraud increases everyone's cost of doing business. Nakamoto proposes an electronic payment system that is based on cryptographic proof instead of trust.</li>
+                    </code>
+                    <blockquote>Cryptography involves the use of code and protocols to establish secure communications. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam possimus, mollitia iure autem amet deserunt nisi praesentium qui velit illum! Accusamus ullam ad maiores unde, non alias atque officia dicta sint asperiores explicabo rem, architecto odit quae possimus, culpa modi quibusdam aspernatur! Eligendi amet tempora ullam earum rem laborum dolorum quae quaerat aut modi, a vel sit rerum temporibus assumenda mollitia iure deserunt sequi. Est omnis laudantium voluptas possimus earum!</blockquote>
+                    <ul>
+                         <p>Such a system would let two parties transact directly with each other. The new method, namely Bitcoin, features the following:</p>
+                         <li>Peer-to-peer payments over an online network.</li>
+                         <li>The elimination of third parties and replacing trust with verification.</li>
+                         <li>Transactions would be irreversible and Nakamoto argues that irreversibility would protect sellers from fraud. Escrow mechanisms can be implemented to protect buyers.</li>
+                         <li>A peer-to-peer distributed timestamp server would generate mathematical proof of the chronological order of transactions. The system is secure so long as honest participants collectively control more computing power than attackers/hackers.</li>
+                    </ul>
+                    <blockquote>Nakamoto believes that it's better to verify transactions rather than trust an external third party, especially when it comes to something as important as money. The irreversibility of transactions provides confidence that the payment system as a whole is robust. Secondly, irreversibility minimizes fraud, he argues. Decentralized computers would prove the exact order of these irreversible transactions, creating user confidence that the records in the electronic audit trail, the blockchain, are valid and accurate.</blockquote>
+               </section>
+
+               <!-- Transactions -->
+               <section class="main-section" id="Transactions">
+                    <header>
+                         <h1>Transactions</h1>
+                    </header>
+                    <p>In this section, Nakamoto's description of the electronic transaction process, namely the blockchain, gets technical. In simple terms, he defines an electronic "coin" as a chain of digital signatures. Owners digitally sign a hash of the previous transaction and add a public key of the next owner to the end of the coin. A recipient of the coin, a payee, can verify the signatures in order to verify the chain of ownership.</p>
+                    <blockquote>A Bitcoin doesn't exist anywhere per se, at least not in the traditional sense of physical cash. Rather, Nakamoto's concept of an electronic "coin" is a chronological series of verified digital signatures. To illustrate, think of Nakamoto's virtual coin as a UPS or FedEx package that you sign at your doorstep before sending it to a forwarding address. But the difference is that a publicly-available ledger is placed right on the packing slip which shows the entire history of all prior deliveries of the same package. The information includes all originating addresses as well as timestamps detailing where and when exactly each delivery took place. Such a comprehensive audit trail, he argues, would provide assurance to both recipient and the entire network that the chain of deliveries/transactions is accurate and secure.</blockquote>
+                    <p>However, Nakamoto points out a potential problem with duplicate payments. A recipient/payee can't verify that a coin's owner didn't send the same coin to other recipients/payees, which is referred to as the double-spend problem.</p>
+                    <p>For example, John owns only one Bitcoin but sends one coin each to two different merchants -- amounting to two Bitcoins paid with only one originating coin. To solve the double-spend problem without relying on a third party, Nakamoto says that all transactions must be publicly revealed. Secondly, all participants of the payment system must adhere to the same timeline so that everyone agrees to a single history of the order in which transactions are received.</p>
+                    <blockquote>A timeline and public history of all transactions prevent double-spending because later transactions would be considered an invalid, or perhaps fraudulent, payment from the same coin. Each coin has a unique timestamp and the earlier transaction would be accepted as the legitimate payment. One coin, one payment. Sending the same coin to a second merchant, per the above example, would show a different timestamp that occurred later in the timeline. And that would invalidate the second payment/transaction.</blockquote>
+               </section>
+
+               <!-- Timestamp server -->
+               <section class="main-section" id="Timestamp_Server">
+                    <header>
+                         <h1>Timestamp Server</h1>
+                    </header>
+                    <p>A timestamp server takes a hash of a block of items and publicly announces the hash. The timestamp proves the existence of the data at the time. Each timestamp includes the previous timestamp in its hash. And each additional timestamp reinforces the ones before it. This sequence forms a chain.</p>
+                    <blockquote>Here we see the emerging structure of the blockchain. The timestamps are key to preventing double-spending and fraud. It'd be virtually impossible to send duplicate coins because each coin contains different, chronologically-ordered timestamps. Think back to the analogy of a UPS/FedEx package. Each delivery would contain a unique timestamp on the packing slip, and that would mark the exact time of each and every delivery on the public ledger. Bitcoin's file size in bytes increases as the transaction history gets larger. And larger files lead to longer processing times. Transaction processing -- or mining -- continually require more CPU power to verify the transactions because the digital records themselves grow in size. Continuing our example, the packing slip on the same UPS/FedEx package keeps growing in size because more deliveries mean more recorded history of all deliveries ever made.</blockquote>
+               </section>
+
+               <!-- Proof-of-Work -->
+               <section class="main-section" id="Proof-Of-Work">
+                    <header>
+                         <h1>Proof-of-Work</h1>
+                    </header>
+                    <p>Nakamoto says that proof-of-work is used to implement a peer-to-peer distributed timestamp network (mentioned above). The process scans for a value that when hashed, results in a certain numerical expression. The timestamp network must reconcile this value with a block's hash. CPU power is needed to satisfy the proof-of-work, and the block cannot be changed without redoing the work. Later blocks are chained after it, and to change the block would require redoing all the blocks after it.</p>
+                    <blockquote>The language may be technical but the concept is simple. Proof-of-work is what safeguards the blockchain. Nakamoto says that a hash created by a timestamp server is assigned a unique number that is then used to identify the hash in the blockchain. Inherent in this unique number is a math puzzle that a computer must solve before a transaction can happen. Once a correct answer is given, it serves as proof that the specified work has been done. When someone sends an electronic coin, they must take a hash's unique number and solve an inherent math puzzle. The answer is then passed to the recipient to check if the solution is correct -- an important validation step. If the answer is correct, the payment/transaction takes place and adds to the length of the blockchain. If not, the proposed transaction is rejected.</blockquote>
+                    <p>Proof-of-work provides one vote per CPU, not by IP address. Otherwise an attacker may allocate several IPs in an attempt to hack the network. Secondly, the longest chain of blocks serves as proof that the CPUs invested the greater amount of work in that longer chain. This process secures the blockchain by requiring would-be-attackers to redo the work of the block and all blocks after it (i.e., solve all those math puzzles) and then try to surpass the work of all the honest computers in the network. Nakamoto says that it'd be an extremely difficult task for an attacker to do just that, and that the probability of success diminishes exponentially the more blocks are added to a chain.</p>
+                    <blockquote>So how does proof-of-work protect the blockchain? In layman's terms, honest CPUs in the network solve each hash's math problem. As these computational puzzles are solved, these blocks are bundled into a chronologically-ordered chain. Thus the term blockchain. This validates to the entire system that all the required "math homework" has been completed. An attacker would have to redo all the completed puzzles and then surpass the work of honest CPUs in order to create a longer chain -- a feat that would be extremely unlikely if not impossible. This sequence makes Bitcoin transactions irreversible. Nakamoto points out that honest nodes in the network need to collectively possess more CPU power than an attacker.</blockquote>
+               </section>
+
+               <!-- Network -->
+               <section class="main-section" id="Network">
+                    <header>
+                         <h1>Network</h1>
+                    </header>
+                    <p>Nakamoto outlines the steps for running the peer-to-peer network:</p>
+                    <ul>
+                         <li>New transactions are broadcast to all nodes/computers in the network.</li>
+                         <li>Each node collects new transactions into a block.</li>
+                         <li>Each node works on finding a difficult proof-of-work for its block.</li>
+                         <li>When a node finds a proof-of-work, it broadcasts the block to all nodes.</li>
+                         <li>Nodes accept the block only if all transactions in it are valid and not already spent.</li>
+                         <li>Nodes express their acceptance of the block by working on creating the next block in the chain, using the hash of the accepted block as the previous hash.</li>
+                    </ul>
+                    <code>
+                         <li>As mentioned in earlier sections, nodes always consider the longest chain to be the correct one and will work on extending it.</li>
+                    </code>
+                    <blockquote>This section shows why it's important to announce transactions to all nodes. It forms the basis for verifying the validity of each transaction as well as each block in the blockchain. As mentioned earlier, each node solves a proof-of-work puzzle and thus always recognizes the longest chain to be the correct version. As time progresses, the blockchain's record grows and provides assurance to the entire network of its validity.</blockquote>
+               </section>
+
+               <!-- Incentive -->
+               <section class="main-section" id="Incentive">
+                    <header>
+                         <h1>Incentive</h1>
+                    </header>
+                    <p>The first transaction in a block is a special transaction that starts a new coin owned by the creator of the block. This achieves two things. First, the creation of a new coin rewards nodes/computers to support the network. Second, it's a way to initially distribute new coins into circulation since there is no central authority to issue them. The new coin rewards nodes -- aka Bitcoin miners -- for expending their time, CPU and electricity to make the network possible. They can also be rewarded with transaction fees. Nakamoto envisions a limited number of coins to ever enter circulation, at which point miners can be incentivized solely by transaction fees that are inflation-free. New coins also incentivize nodes to play by the rules and remain honest. An attacker would have to expend a ton of resources to threaten the system, and getting rewarded by coins and transaction fees serve as a deterrent to such fraud.</p>
+                    <blockquote>Mining gold requires labor, water and equipment and it's an activity similar to Bitcoin mining. The miners of electronic coins process transactions, for which they are rewarded with new Bitcoins and/or transaction fees. Since a maximum of 21 million Bitcoins will ever be mined, the system can be free of inflation. Therefore, Bitcoin can serve as a sustainable store of value, similar to gold. Compare that to fiat currency, such as the U.S. dollar. Due to inflation, the dollar has devalued nearly 97 percent since 1913. Bitcoin's incentive program is a mechanism that protects the peer-to-peer electronic payment system. The issuance of new Bitcoin as well as transaction fees keep nodes honest. Because it wouldn't be worth it to attack the very system that forms the foundation of their wealth. As the saying goes, you don't bite the hand that feeds you.</blockquote>
+               </section>
+
+               <!-- Reclaiming Disk Space -->
+               <section class="main-section" id="Reclaiming_Disk_Space">
+                    <header>
+                         <h1>Reclaiming Disk Space</h1>
+                    </header>
+                    <p>To save disk space, Nakamoto says that nodes can discard data from old transactions, with only the root of the discarded transaction kept in the block's hash. This enables the blockchain to remain intact, albeit with less data from old transactions. He briefly describes a process for compacting data. But with Moore's Law, Nakamoto says that the future capacity of computer hardware should be sufficient to operate the network without miners having to worry about storage space.</p>
+               </section>
+
+               <!-- Simplified Payment Verification -->
+               <section class="main-section" id="Simplified_Payment_Verification">
+                    <header>
+                         <h1>Simplified Payment Verification</h1>
+                    </header>
+                    <p>In this section, Nakamoto provides a technical explanation of how to verify payments without running a full network node. That requires getting the longest proof-of-work chain and checking if the network has accepted it. The verification is reliable as long as honest nodes control the network. But an attacker can create fraudulent transactions for as long as an attacker can overpower the network. One defense against an attack is for network nodes to broadcast alerts when they detect an invalid block. Such an alert could prompt a user's software to download the full block as well as alerted transactions in order to confirm the inconsistency. Nakamoto adds that businesses that receive frequent payments may want to consider operating their own nodes to achieve more independent security and quicker verification.</p>
+                    <blockquote>There are non-Bitcoin blockchain protocols that large companies are applying outside finance. For example, a company can create an invite-only protocol that selects certain parties to participate in a private network of nodes. The point is, there are many ways to set up a blockchain network that follows a different set of rules for verification. Nakamoto describes one way to do so for a peer-to-peer payment system, but he says that businesses may want to adapt their processes based on their own unique circumstances.</blockquote>
+               </section>
+
+               <!-- Combining and Spliting Value -->
+               <section class="main-section" id="Combining_and_Splitting_Value">
+                    <header>
+                         <h1>Combining and Splitting Value</h1>
+                    </header>
+                    <p>Combining transaction amounts will result in more efficient transfers as opposed to creating a separate transaction for every cent involved.</p>
+                    <blockquote>In other words, it'd be simpler and more efficient to send three Bitcoins in a single transaction rather than create three transactions of one Bitcoin each, assuming the coins are sent to the same recipient.</blockquote>
+                    <p>To allow transaction values (amounts) to be split or combined, transactions can contain multiple inputs and outputs. There can be single or multiple inputs. But there can only be a maximum of two outputs: one for the payment, and one returning the change, if any, back to the sender.</p>
+                    <blockquote>This process enables payments with specific amounts. A sender can send Bitcoin payment to another party and get back his/her change, if needed.</blockquote>
+               </section>
+
+               <!-- Privacy -->
+               <section class="main-section" id="Privacy">
+                    <header>
+                         <h1>Privacy</h1>
+                    </header>
+
+                    <p>With traditional payments, users attain privacy when banks limit information available to the parties involved as well as the third party. With the peer-to-peer network, privacy can still be achieved even though transactions are announced. This is accomplished by keeping public keys anonymous. The network may be able to see payment amounts being sent and received, but transactions are not linked to identities. Additionally, Nakamoto proposes that a new private key should be used for each transaction to avoid payments being linked to a common owner.</p>
+                    <blockquote>To maintain privacy, Nakamoto says it's important for public keys to keep a user's identity anonymous. While everyone may be able to see transactions, no identifiable information is distributed.</blockquote>
+               </section>
+
+               <!-- Calculations -->
+               <section class="main-section" id="Calculations">
+
+                    <header>
+                         <h1>Calculations</h1>
+                    </header>
+
+                    <p>It's highly unlikely for an attacker to create an alternate chain faster than an honest chain. Nodes won't accept an invalid transaction or blocks containing them. Moreover, an attacker is limited in what he can attempt to do: He can only try to change one of his own transactions to retrieve coins he recently spent. The probability that an attacker succeeds drops exponentially the more valid blocks are added to the chain. Nakamoto says that an attacker would have to get lucky early on to have a remote chance. Moreover, a receiver creates a new public key and gives it to a sender shortly before signing. This makes it difficult for an attacker to execute a fraudulent transaction through a parallel chain.</p>
+                    <blockquote>There's a higher probability that an honest node will find a block faster than an attacker. It'd be extremely difficult for an attacker to solve several proof-of-work puzzles in a row faster than the rest of the honest nodes. Every 10 minutes, there are new puzzles being solved by nodes in the network.</blockquote>
+               </section>
+
+               <!-- Conclusion -->
+               <section class="main-section" id="Conclusion">
+
+                    <header>
+                         <h1>Conclusion</h1>
+                    </header>
+
+                    <p>The peer-to-peer system for electronic payments relies on a distributed network of honest nodes to validate transactions. Validation replaces the need to trust expensive third parties such as banks. The electronic coins are made from digital signatures, and proof-of-work that form the blockchain prevent double-spending. The system stays secure so long as honest nodes control more CPU power than an attacker. Moreover, the nodes accept longer blocks as valid and work on extending them. This protocol rejects invalid blocks, and potential fraud, in the process. Rules and incentives can be enforced using a voting system.</p>
+                    <blockquote>In the final section, Nakamoto says that "The network is robust in its unstructured simplicity." Yes indeed!</blockquote>
+                    <p>Thanks for reading the Bitcoin Whitepaper annotated version. Bitcoin.com has other guides to help you use Bitcoin right now. Be sure to download the fastest and free Bitcoin.com Wallet to take your Bitcoin experience to the next level!</p>
+                    <code>
+                         <p>This annotated version of the Bitcoin Whitepaper was taken from <a href="https://www.bitcoin.com/get-started/bitcoin-white-paper-beginner-guide/">Bitcoin.com</a></p>
+                    </code>
+               </section>
+          </main>
+     </div>
+
+     <script src="main.js"></script>
+     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 </html>
